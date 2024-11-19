@@ -1,0 +1,265 @@
+[
+    {
+        "_id": "1",
+        "brand_name": "Daraz",
+        "rating": 4.5,
+        "description": "Shop the best deals and discounts from Daraz Bangladesh.",
+        "brand_logo": "https://i.ibb.co.com/w4yF96w/1.png",
+        "coupons": [
+            {
+                "coupon_code": "DARAZ50",
+                "description": "50% off on selected items",
+                "expiry_date": "2024-12-31",
+                "condition": "Minimum purchase of 1000 BDT",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "FREEDELIVERY",
+                "description": "Free delivery on orders over 500 BDT",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid only in Dhaka city",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.daraz.com.bd",
+        "category": "E-commerce",
+        "isSaleOn": true
+    },
+    {
+        "_id": "2",
+        "brand_name": "Foodpanda",
+        "rating": 4.3,
+        "description": "Delicious food delivery from your favorite restaurants.",
+        "brand_logo": "https://i.ibb.co.com/XWXfknN/2.png",
+        "coupons": [
+            {
+                "coupon_code": "PANDA20",
+                "description": "20% off on all orders",
+                "expiry_date": "2024-11-30",
+                "condition": "Max discount 200 BDT",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "MEALDEAL",
+                "description": "Save 100 BDT on combos",
+                "expiry_date": "2024-12-15",
+                "condition": "Only for selected restaurants",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.foodpanda.com.bd",
+        "category": "Food Delivery",
+        "isSaleOn": true
+    },
+    {
+        "_id": "3",
+        "brand_name": "Pathao",
+        "rating": 4.2,
+        "description": "Affordable rides and deliveries across Bangladesh.",
+        "brand_logo": "https://i.ibb.co.com/r4RX51Q/3.png",
+        "coupons": [
+            {
+                "coupon_code": "RIDENOW",
+                "description": "10% off on your next ride",
+                "expiry_date": "2024-12-10",
+                "condition": "Valid for new users only",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "DELIVERFREE",
+                "description": "Free delivery on groceries",
+                "expiry_date": "2024-11-25",
+                "condition": "Min purchase 700 BDT",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.pathao.com",
+        "category": "Transportation",
+        "isSaleOn": false
+    },
+    {
+        "_id": "4",
+        "brand_name": "Pickaboo",
+        "rating": 4.1,
+        "description": "Your one-stop shop for electronics and gadgets.",
+        "brand_logo": "https://i.ibb.co.com/zb1nkMq/4.png",
+        "coupons": [
+            {
+                "coupon_code": "GADGETS100",
+                "description": "100 BDT off on electronics",
+                "expiry_date": "2024-12-20",
+                "condition": "Min spend 1500 BDT",
+                "coupon_type": "Flat"
+            },
+            {
+                "coupon_code": "FESTIVE20",
+                "description": "20% off during the festive season",
+                "expiry_date": "2024-12-31",
+                "condition": "Max discount 500 BDT",
+                "coupon_type": "Percentage"
+            }
+        ],
+        "shop_link": "https://www.pickaboo.com",
+        "category": "Electronics",
+        "isSaleOn": true
+    },
+    {
+        "_id": "5",
+        "brand_name": "Evaly",
+        "rating": 3.9,
+        "description": "Exclusive deals and offers on Evaly platform.",
+        "brand_logo": "https://i.ibb.co.com/mThh4M7/5.png",
+        "coupons": [
+            {
+                "coupon_code": "SAVE50",
+                "description": "Save 50 BDT on any purchase",
+                "expiry_date": "2024-11-30",
+                "condition": "Min purchase 500 BDT",
+                "coupon_type": "Flat"
+            },
+            {
+                "coupon_code": "BIGSALE",
+                "description": "30% off on selected items",
+                "expiry_date": "2024-12-25",
+                "condition": "Max discount 300 BDT",
+                "coupon_type": "Percentage"
+            }
+        ],
+        "shop_link": "https://www.evaly.com.bd",
+        "category": "E-commerce",
+        "isSaleOn": true
+    },
+    {
+        "_id": "6",
+        "brand_name": "Shohoz",
+        "rating": 4.0,
+        "description": "Ride-sharing and ticket booking made easy.",
+        "brand_logo": "https://i.ibb.co.com/b67h96m/6.png",
+        "coupons": [
+            {
+                "coupon_code": "RIDE50",
+                "description": "50 BDT off on your next ride",
+                "expiry_date": "2024-12-10",
+                "condition": "Applicable for first 3 rides",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.shohoz.com",
+        "category": "Transportation",
+        "isSaleOn": false
+    },
+    {
+        "_id": "7",
+        "brand_name": "Othoba",
+        "rating": 4.1,
+        "description": "Wide variety of products for everyday needs.",
+        "brand_logo": "https://i.ibb.co.com/Lzsj12V/7.png",
+        "coupons": [
+            {
+                "coupon_code": "OTHOBA10",
+                "description": "10% off on all products",
+                "expiry_date": "2024-11-30",
+                "condition": "Max discount 500 BDT",
+                "coupon_type": "Percentage"
+            }
+        ],
+        "shop_link": "https://www.othoba.com",
+        "category": "E-commerce",
+        "isSaleOn": true
+    },
+    {
+        "_id": "8",
+        "brand_name": "Chaldal",
+        "rating": 4.4,
+        "description": "Online grocery shopping with amazing deals.",
+        "brand_logo": "https://i.ibb.co.com/ZLft4hZ/8.png",
+        "coupons": [
+            {
+                "coupon_code": "GROCERY20",
+                "description": "20% off on first order",
+                "expiry_date": "2024-12-31",
+                "condition": "Min purchase 1000 BDT",
+                "coupon_type": "Percentage"
+            }
+        ],
+        "shop_link": "https://www.chaldal.com",
+        "category": "Grocery",
+        "isSaleOn": true
+    },
+    {
+        "_id": "9",
+        "brand_name": "Uber Eats",
+        "rating": 4.3,
+        "description": "Food delivery from top restaurants around you.",
+        "brand_logo": "https://i.ibb.co.com/D8RMm8d/9.png",
+        "coupons": [
+            {
+                "coupon_code": "UBEREATS30",
+                "description": "30% off on your first order",
+                "expiry_date": "2024-12-25",
+                "condition": "Max discount 250 BDT",
+                "coupon_type": "Percentage"
+            }
+        ],
+        "shop_link": "https://www.ubereats.com",
+        "category": "Food Delivery",
+        "isSaleOn": false
+    },
+    {
+        "_id": "10",
+        "brand_name": "Bkash",
+        "rating": 4.6,
+        "description": "Get amazing cashback offers with Bkash payments.",
+        "brand_logo": "https://i.ibb.co.com/Qrrn3J3/10.png",
+        "coupons": [
+            {
+                "coupon_code": "BKASHCASHBACK",
+                "description": "10% cashback on selected merchants",
+                "expiry_date": "2024-12-20",
+                "condition": "Max cashback 200 BDT",
+                "coupon_type": "Cashback"
+            }
+        ],
+        "shop_link": "https://www.bkash.com",
+        "category": "Payment",
+        "isSaleOn": true
+    },
+    {
+        "_id": "11",
+        "brand_name": "Sheba.xyz",
+        "rating": 4.2,
+        "description": "Book reliable home services easily.",
+        "brand_logo": "https://i.ibb.co.com/GHRcVkC/11.webp",
+        "coupons": [
+            {
+                "coupon_code": "HOME50",
+                "description": "50 BDT off on cleaning services",
+                "expiry_date": "2024-12-15",
+                "condition": "Valid for first-time users",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.sheba.xyz",
+        "category": "Services",
+        "isSaleOn": true
+    },
+    {
+        "_id": "12",
+        "brand_name": "AjkerDeal",
+        "rating": 4.0,
+        "description": "Explore deals on a variety of products.",
+        "brand_logo": "https://i.ibb.co.com/B4ntryd/12.png",
+        "coupons": [
+            {
+                "coupon_code": "DEAL100",
+                "description": "Save 100 BDT on fashion items",
+                "expiry_date": "2024-11-30",
+                "condition": "Min purchase 1200 BDT",
+                "coupon_type": "Flat"
+            }
+        ],
+        "shop_link": "https://www.ajkerdeal.com",
+        "category": "E-commerce",
+        "isSaleOn": false
+    }
+]
