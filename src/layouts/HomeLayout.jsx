@@ -10,8 +10,7 @@ import { TopCategories } from "../components/Home/TopCategories";
 
 export default function HomeLayout() {
     return (
-        <div className="bg-[#E6F0F4]">
-            <Navbar />
+        <div>
             <SimpleSlider />
             <TopBrands />
             <BrandsOnSale />
@@ -19,7 +18,6 @@ export default function HomeLayout() {
             <FeaturedCoupons />
             <FAQSection />
             <SubscriptionCard />
-            <Footer />
         </div>
     )
 }
