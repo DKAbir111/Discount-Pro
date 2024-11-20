@@ -1,4 +1,5 @@
 import qr from '../../assets/qr.png'
+import { FaFacebook, FaInstagram, FaTelegram, FaTwitter } from "react-icons/fa6";
 const Footer = () => {
     return (
         <footer className="bg-gray-800 text-white">
@@ -102,14 +103,16 @@ const Footer = () => {
             <div className="container mx-auto px-6 py-6 grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Blog Section */}
                 <div>
-                    <h3 className="text-lg font-semibold mb-4">Latest From The Blog</h3>
-                    <div className="text-sm">
-                        <p className="font-medium">
-                            Diwali Shopping on a Budget: Top Tips for Scoring Great Discounts
-                        </p>
-                        <p className="text-gray-400">By Preksha Malavia</p>
+                    <h3 className="text-lg font-semibold mb-4">Get in Touch for More Offers</h3>
+                    <div className="text-xl flex gap-3">
+                        <FaFacebook />
+                        <FaInstagram />
+                        <FaTwitter />
+                        <FaTelegram />
                     </div>
+                    <p className='text-sm mt-2'>Stay connected with us to discover the latest discounts, exclusive deals, and exciting offers tailored just for you!</p>
                 </div>
+
 
                 {/* Hiring Section */}
                 <div>
@@ -132,13 +135,13 @@ const Footer = () => {
                     <p className="text-sm mb-4">
                         Get the best deals & offers in your email.
                     </p>
-                    <div className="flex">
+                    <div className="flex md:flex-col lg:flex-row lg:flex">
                         <input
                             type="email"
                             placeholder="Enter your email address"
                             className="px-4 py-2 rounded-l-md bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-green-400"
                         />
-                        <button className="bg-red-500 px-4 py-2 rounded-r-md hover:bg-red-600">
+                        <button className="bg-red-500 px-4 py-2 lg:rounded-r-md hover:bg-red-600">
                             Subscribe
                         </button>
                     </div>
