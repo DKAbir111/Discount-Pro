@@ -9,9 +9,9 @@ export default function BrandCard({ brand }) {
         edit: false
     };
     return (
-        <div className="grid grid-cols-3 border bg-white">
-            <div className="flex items-center justify-center gap-4">
-                <img src={brand_logo} alt={brand_name} className="w-32" />
+        <div className="grid grid-cols-1 md:grid-cols-3 border bg-white rounded-md">
+            <div className="flex items-center justify-center gap-4 p-5">
+                <img src={brand_logo} alt={brand_name} className="w-28 lg:w-32" />
                 <div>
                     <h3 className="text-xl font-semibold text-gray-600">{brand_name}</h3>
                     <ReactStars {...firstExample} />
@@ -19,13 +19,13 @@ export default function BrandCard({ brand }) {
 
                 </div>
             </div>
-            <div className="bg-base-200 border-l border-base-300">
-                <div className="flex flex-col gap-3 justify-center py-10 px-4">
+            <div className="bg-base-200 border-l border-base-300 p-5">
+                <div className="flex flex-col gap-3 justify-center md:py-10 px-4 text-center md:text-left">
                     <h3 className="text-lg font-semibold">{category}</h3>
                     <p className="text-gray-600">{description}</p>
                 </div>
             </div>
-            <div className="flex flex-col justify-center items-end pr-10">
+            <div className="flex flex-col justify-center items-center md:items-end pr-10 p-3">
                 {
                     isSaleOn && (
                         <motion.div
