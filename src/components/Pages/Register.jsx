@@ -1,8 +1,31 @@
+import { useContext } from "react"
+import AuthContext from "../../Context/AuthContext"
+import auth from "../../Firebase/firebase.init";
+import { updateProfile } from "firebase/auth";
+
 export default function Register() {
+
+
+    const { createUser } = useContext(AuthContext)
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const photo = event.target.photo.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        createUser(email, password)
+            .then(result => {
+                console.log(result)
+                updateProfile(auth.currentUser, {
+                    displayName: name, photoURL: photo
+                })
+            })
+            .catch(error => console.log(error.message));
+    }
     return (
         <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-sm mx-auto px-7 pt-7 my-16">
             <h3 className="text-center text-2xl font-semibold">Register your account</h3>
-            <form className="card-body">
+            <form className="card-body" onSubmit={handleSubmit}>
                 {/* Name Field */}
                 <div className="form-control">
                     <label className="label">
