@@ -142,6 +142,13 @@
                 "expiry_date": "2024-12-10",
                 "condition": "Applicable for first 3 rides",
                 "coupon_type": "Flat"
+            },
+            {
+                "coupon_code": "RIDE100",
+                "description": "100 BDT off on rides over 500 BDT",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid for all users",
+                "coupon_type": "Flat"
             }
         ],
         "shop_link": "https://www.shohoz.com",
@@ -160,6 +167,13 @@
                 "description": "10% off on all products",
                 "expiry_date": "2024-11-30",
                 "condition": "Max discount 500 BDT",
+                "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "OTHOBA20",
+                "description": "20% off on orders above 2000 BDT",
+                "expiry_date": "2024-12-31",
+                "condition": "Max discount 1000 BDT",
                 "coupon_type": "Percentage"
             }
         ],
@@ -180,6 +194,13 @@
                 "expiry_date": "2024-12-31",
                 "condition": "Min purchase 1000 BDT",
                 "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "GROCERYDEL100",
+                "description": "100 BDT off on delivery charges",
+                "expiry_date": "2024-12-25",
+                "condition": "Valid for orders over 1500 BDT",
+                "coupon_type": "Flat"
             }
         ],
         "shop_link": "https://www.chaldal.com",
@@ -199,6 +220,13 @@
                 "expiry_date": "2024-12-25",
                 "condition": "Max discount 250 BDT",
                 "coupon_type": "Percentage"
+            },
+            {
+                "coupon_code": "UBEREATSDEL50",
+                "description": "50% off on delivery charges",
+                "expiry_date": "2024-12-31",
+                "condition": "Valid for orders over 500 BDT",
+                "coupon_type": "Flat"
             }
         ],
         "shop_link": "https://www.ubereats.com",
@@ -218,6 +246,13 @@
                 "expiry_date": "2024-12-20",
                 "condition": "Max cashback 200 BDT",
                 "coupon_type": "Cashback"
+            },
+            {
+                "coupon_code": "BKASHPAYDISCOUNT",
+                "description": "5% discount on utility bill payments",
+                "expiry_date": "2024-11-30",
+                "condition": "Minimum payment of 1000 BDT",
+                "coupon_type": "Discount"
             }
         ],
         "shop_link": "https://www.bkash.com",
@@ -237,6 +272,13 @@
                 "expiry_date": "2024-12-15",
                 "condition": "Valid for first-time users",
                 "coupon_type": "Flat"
+            },
+            {
+                "coupon_code": "HOME100",
+                "description": "100 BDT off on home repair services",
+                "expiry_date": "2025-01-10",
+                "condition": "Minimum booking of 500 BDT",
+                "coupon_type": "Flat"
             }
         ],
         "shop_link": "https://www.sheba.xyz",
@@ -255,6 +297,13 @@
                 "description": "Save 100 BDT on fashion items",
                 "expiry_date": "2024-11-30",
                 "condition": "Min purchase 1200 BDT",
+                "coupon_type": "Flat"
+            },
+            {
+                "coupon_code": "DEAL200",
+                "description": "Save 200 BDT on electronics",
+                "expiry_date": "2024-12-15",
+                "condition": "Min purchase 3000 BDT",
                 "coupon_type": "Flat"
             }
         ],
