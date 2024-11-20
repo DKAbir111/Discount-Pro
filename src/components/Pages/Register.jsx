@@ -1,27 +1,85 @@
-import { useContext } from "react"
-import AuthContext from "../../Context/AuthContext"
+import { useContext, useState } from "react";
+import AuthContext from "../../Context/AuthContext";
 import auth from "../../Firebase/firebase.init";
 import { updateProfile } from "firebase/auth";
+import { toast } from "react-toastify";
 
 export default function Register() {
+    const { createUser } = useContext(AuthContext);
+    const [error, setError] = useState('');
 
+    const notify = (message) => toast.error(message);
 
-    const { createUser } = useContext(AuthContext)
     const handleSubmit = (event) => {
         event.preventDefault();
         const name = event.target.name.value;
         const photo = event.target.photo.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
+        const checkbox = event.target.checkbox.checked;
+
+        console.log(checkbox);
+
+        // Password validation regex for individual checks
+        const passwordLengthRegex = /^.{6,}$/;
+        const passwordLowercaseRegex = /[a-z]/;
+        const passwordUppercaseRegex = /[A-Z]/;
+        const passwordNumberRegex = /\d/;
+        const passwordSpecialCharRegex = /[@$!%*?&]/;
+
+        setError(""); // Clear previous errors
+
+        // Password checks
+        if (!passwordLengthRegex.test(password)) {
+            setError("Password must be at least 6 characters long.");
+            return;
+        }
+
+        if (!passwordLowercaseRegex.test(password)) {
+            setError("Password must contain at least one lowercase letter.");
+            return;
+        }
+
+        if (!passwordUppercaseRegex.test(password)) {
+            setError("Password must contain at least one uppercase letter.");
+            return;
+        }
+
+        if (!passwordNumberRegex.test(password)) {
+            setError("Password must contain at least one number.");
+            return;
+        }
+
+        if (!passwordSpecialCharRegex.test(password)) {
+            setError("Password must contain at least one special character (@$!%*?&).");
+            return;
+        }
+
+        if (!checkbox) {
+            setError("You must agree to the terms and conditions.");
+            return;
+        }
+
+        // Create user
         createUser(email, password)
             .then(result => {
-                console.log(result)
+                console.log(result);
+                // Update profile
                 updateProfile(auth.currentUser, {
                     displayName: name, photoURL: photo
-                })
+                }).then(() => {
+                    event.target.reset();
+                }).catch(error => {
+                    setError(error.message);
+                    notify(error.message);
+                });
             })
-            .catch(error => console.log(error.message));
-    }
+            .catch(error => {
+                setError(error.message);
+                notify(error.message);
+            });
+    };
+
     return (
         <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-sm mx-auto px-7 pt-7 my-16">
             <h3 className="text-center text-2xl font-semibold">Register your account</h3>
@@ -82,16 +140,16 @@ export default function Register() {
                     />
                 </div>
 
-                {/* Display error message */}
-                {/* {error && <p className="text-red-500 text-sm mt-2">{error}</p>} */}
-
                 {/* Terms & Conditions */}
                 <div className="form-control">
                     <label className="label cursor-pointer justify-start gap-2">
-                        <input type="checkbox" defaultChecked className="checkbox" />
+                        <input type="checkbox" name="checkbox" className="checkbox" />
                         <span className="label-text">Accept Terms & Conditions</span>
                     </label>
                 </div>
+
+                {/* Display error message */}
+                {error && <p className="text-red-500 text-sm mt-2 text-center">{error}</p>}
 
                 {/* Register Button */}
                 <div className="form-control mt-3">
@@ -99,6 +157,5 @@ export default function Register() {
                 </div>
             </form>
         </div>
-
-    )
+    );
 }
