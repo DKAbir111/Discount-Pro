@@ -10,6 +10,7 @@ export default function BrandsOnSale() {
             <h3 className="text-2xl text-center text-gray-700 font-semibold mb-6">
                 Brands on Sale
             </h3>
+
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                 {/* Card for Each Brand */}
                 {brandsOnSale.map((brand) => (
