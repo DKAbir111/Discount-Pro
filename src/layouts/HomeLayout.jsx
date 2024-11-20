@@ -1,6 +1,12 @@
+import BrandsOnSale from "../components/Home/BarndOnSale";
+import FAQSection from "../components/Home/FAQSection";
+import { FeaturedCoupons } from "../components/Home/FeatutedCupons";
+import Footer from "../components/Home/Footer";
 import Navbar from "../components/Home/Navbar";
 import SimpleSlider from "../components/Home/SimpleSlider";
+import SubscriptionCard from "../components/Home/SubscriptionCard";
 import TopBrands from "../components/Home/TopBrands";
+import { TopCategories } from "../components/Home/TopCategories";
 
 export default function HomeLayout() {
     return (
@@ -8,6 +14,12 @@ export default function HomeLayout() {
             <Navbar />
             <SimpleSlider />
             <TopBrands />
+            <BrandsOnSale />
+            <TopCategories />
+            <FeaturedCoupons />
+            <FAQSection />
+            <SubscriptionCard />
+            <Footer />
         </div>
     )
 }
