@@ -1,7 +1,7 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 export default function SimpleSlider() {
@@ -35,8 +35,8 @@ export default function SimpleSlider() {
   };
   const data = useLoaderData();
   return (
-    <div className="slider-container container mx-auto overflow-x-hidden h-[420px]">
-      <h3 className="text-3xl font-semibold text-center mt-6 text-gray-700">Today's Top Coupons</h3>
+    <div className="slider-container container mx-auto overflow-x-hidden h-[420px] px-7">
+      <h3 className="text-3xl font-semibold text-center mt-6 text-gray-700">Today&apos;s Top Coupons</h3>
       <Slider {...settings}>
         {data.map((brand) => (
           <div
@@ -50,12 +50,13 @@ export default function SimpleSlider() {
             />
             <h3 className="text-xl font-bold text-gray-500">{brand.brand_name}</h3>
             <p className="text-gray-600 font-semibold">{brand.coupons[0].description}</p>
-            <button
-              className="mt-4 px-5 py-2 text-white font-medium bg-[#19BC9B] hover:bg-[#17A68A] transition-all"
+            <Link to={`/brand/${brand._id}`}
+              className="mt-4 btn px-5 rounded-sm py-2 text-white font-medium bg-[#19BC9B] hover:bg-[#17A68A] transition-all"
             >
               View Coupons
-            </button>
+            </Link>
           </div>
+
         ))}
       </Slider>
     </div>

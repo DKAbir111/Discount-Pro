@@ -54,7 +54,7 @@ export default function Navbar() {
                 </div>
                 <div className="navbar-end flex gap-3">
                     <Link to='/auth/login' className="btn bg-[#19BC9B] border-none rounded-sm">Login</Link>
-                    <Link to='/auth/registration' className="border-2 btn rounded-sm text-white bg-transparent">Registration</Link>
+                    <Link to='/auth/register' className="border-2 btn rounded-sm text-white bg-transparent">Registration</Link>
                 </div>
             </div>
         </div>

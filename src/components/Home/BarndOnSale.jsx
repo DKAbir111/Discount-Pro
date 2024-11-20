@@ -1,4 +1,4 @@
-import React from "react";
+import { motion } from "framer-motion";
 import { useLoaderData } from "react-router-dom";
 
 export default function BrandsOnSale() {
@@ -7,8 +7,24 @@ export default function BrandsOnSale() {
 
     return (
         <div className="my-12 container mx-auto p-3 md:p-0">
-            <h3 className="text-2xl text-center text-gray-700 font-semibold mb-6">
-                Brands on Sale
+            <h3 className="text-2xl text-center text-gray-700 font-semibold mb-6 flex justify-center gap-2">
+                Brands on  <motion.div
+                    animate={{
+                        y: [0, 5, 0],
+                    }}
+                    transition={{
+                        duration: 0.5,
+                        repeat: Infinity,
+                        repeatType: "loop",
+                    }}
+                    style={{ color: "red", fontWeight: "bold" }}
+                >
+
+                    Sale 🔥
+
+                </motion.div>
+
+
             </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
