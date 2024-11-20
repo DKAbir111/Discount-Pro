@@ -1,8 +1,9 @@
 import ReactStars from "react-rating-stars-component";
 import PropTypes from "prop-types";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 export default function BrandCard({ brand }) {
-    const { brand_name, rating, description, brand_logo, category, isSaleOn } = brand;
+    const { _id, brand_name, rating, description, brand_logo, category, isSaleOn } = brand;
     const firstExample = {
         size: 20,
         value: rating,
@@ -46,9 +47,9 @@ export default function BrandCard({ brand }) {
                     )
                 }
                 <div>
-                    <button className="bg-[#19BC9B] text-white px-4 py-2 btn rounded-sm">
+                    <Link to={`/brand/${_id}`} id={_id} className="bg-[#19BC9B] text-white px-4 py-2 btn rounded-sm">
                         View Coupons
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
