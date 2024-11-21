@@ -3,10 +3,12 @@ import AuthContext from "../../Context/AuthContext";
 import auth from "../../Firebase/firebase.init";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
     const { createUser } = useContext(AuthContext);
     const [error, setError] = useState('');
+    const navigate = useNavigate()
 
     const notify = (message) => toast.error(message);
 
@@ -69,6 +71,8 @@ export default function Register() {
                     displayName: name, photoURL: photo
                 }).then(() => {
                     event.target.reset();
+                    toast.success("User Successfully Created");
+                    navigate('/')
                 }).catch(error => {
                     setError(error.message);
                     notify(error.message);

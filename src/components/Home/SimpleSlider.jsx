@@ -35,7 +35,7 @@ export default function SimpleSlider() {
   };
   const data = useLoaderData();
   return (
-    <div className="slider-container container mx-auto overflow-x-hidden h-[420px] px-7">
+    <div className="slider-container container mx-auto overflow-hidden h-[420px] px-7">
       <h3 className="text-3xl font-semibold text-center mt-6 text-gray-700">Today&apos;s Top Coupons</h3>
       <Slider {...settings}>
         {data.map((brand) => (

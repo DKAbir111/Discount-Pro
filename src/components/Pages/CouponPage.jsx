@@ -1,8 +1,9 @@
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, useLocation, useNavigate } from "react-router-dom"
 import ReactStars from "react-rating-stars-component";
 import CouponCard from "../Card/CouponCard";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
+import { RxCross2 } from "react-icons/rx";
 export default function CouponPage() {
     const brand = useLoaderData()
     const { brand_name, rating, description, brand_logo, coupons, shop_link } = brand;
@@ -12,9 +13,13 @@ export default function CouponPage() {
         value: rating,
         edit: false
     };
+    const navigate = useNavigate()
 
     return (
-        <div className="p-7 bg-base-200 w-1/2 mx-auto m-6 flex flex-col  justify-center items-center rounded-lg shadow-lg">
+        <div className="p-7 bg-base-200 w-1/2 mx-auto my-10 flex flex-col  justify-center items-center rounded-lg shadow-2xl relative">
+            <div className="absolute btn btn-circle btn-sm btn-error -top-2 -right-2" onClick={() => navigate(-1)}>
+                <RxCross2 />
+            </div>
             <div className="flex items-center gap-2 justify-center flex-col">
                 <img src={brand_logo} alt={brand_name} className="w-40" />
                 <h3 className="text-2xl font-bold text-center">{brand_name}</h3>

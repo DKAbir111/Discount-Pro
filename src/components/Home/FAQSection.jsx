@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const faqs = [
     {
         "question": "What is Discount PRO?",

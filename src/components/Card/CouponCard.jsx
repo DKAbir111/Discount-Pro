@@ -6,6 +6,7 @@ const CouponCard = ({ coupon }) => {
 
     return (
         <div className="border bg-[#E6F0F3] mt-4 border-gray-300 flex flex-col rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow">
+
             <div className="flex-1">
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">{coupon.description}</h3>
                 <p className="text-sm text-gray-600 mb-1">

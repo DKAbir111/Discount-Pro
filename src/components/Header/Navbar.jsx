@@ -1,7 +1,19 @@
+import { useContext } from "react"
 import { Link, NavLink } from "react-router-dom"
+import AuthContext from "../../Context/AuthContext"
 
 export default function Navbar() {
 
+    const { user, logOut } = useContext(AuthContext)
+    const handleLogOut = () => {
+        logOut()
+            .then((result) => {
+                console.log(result)
+            }).catch((error) => {
+                console.error(error)
+            });
+
+    }
     const links = <>
         <li>
             <NavLink to={'/'} className='md:text-white'>Home</NavLink>
@@ -9,9 +21,11 @@ export default function Navbar() {
         <li>
             <NavLink to={'/brands'} className='md:text-white'>Brands</NavLink>
         </li>
-        <li>
-            <NavLink to={'/profile'} className='md:text-white'>My Profile</NavLink>
-        </li>
+        {
+            user?.email && <li>
+                <NavLink to={'/profile'} className='md:text-white'>My Profile</NavLink>
+            </li>
+        }
         <li>
             <NavLink to={'/about'} className='md:text-white'>About Dev</NavLink>
         </li>
@@ -53,8 +67,12 @@ export default function Navbar() {
                     </ul>
                 </div>
                 <div className="navbar-end flex gap-3">
-                    <Link to='/auth/login' className="btn bg-[#19BC9B] border-none rounded-sm">Login</Link>
-                    <Link to='/auth/register' className="border-2 btn rounded-sm text-white bg-transparent">Registration</Link>
+                    {
+                        !user ? <>
+                            <Link to='/auth/login' className="btn bg-[#19BC9B] border-none rounded-sm">Login</Link>
+                            <Link to='/auth/register' className="border-2 btn rounded-sm text-white bg-transparent">Registration</Link></> :
+                            <button className="btn bg-[#19BC9B] border-none rounded-sm" onClick={handleLogOut}>Log Out</button>
+                    }
                 </div>
             </div>
         </div>
