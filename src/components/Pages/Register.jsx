@@ -4,6 +4,7 @@ import auth from "../../Firebase/firebase.init";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 export default function Register() {
     const { createUser } = useContext(AuthContext);
@@ -11,7 +12,7 @@ export default function Register() {
     const navigate = useNavigate()
 
     const notify = (message) => toast.error(message);
-
+    const [showpass, setShowpass] = useState(false)
     const handleSubmit = (event) => {
         event.preventDefault();
         const name = event.target.name.value;
@@ -131,17 +132,26 @@ export default function Register() {
                 </div>
 
                 {/* Password Field */}
-                <div className="form-control">
+                <div className="form-control relative">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
                     <input
-                        type="password"
+                        type={showpass ? "text" : "password"}
                         name="password"
                         placeholder="Enter a secure password"
                         className="input input-bordered"
                         required
                     />
+                    <div className="absolute top-12 right-2 btn btn-xs" onClick={() => setShowpass(!showpass)}>
+                        {
+                            showpass ? (
+                                <FaEyeSlash className="text-gray-500" />
+                            ) : (
+                                <FaEye className="text-gray-500" />
+                            )
+                        }
+                    </div>
                 </div>
 
                 {/* Terms & Conditions */}

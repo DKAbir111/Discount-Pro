@@ -1,11 +1,14 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
 
 
 export default function Login() {
     const navigate = useNavigate()
     const location = useLocation()
+    const [showpass, setShowpass] = useState(false)
     console.log(location)
     const [error, setError] = useState("")
     // console.log(location)
@@ -35,11 +38,20 @@ export default function Login() {
                     </label>
                     <input type="email" placeholder="email" name="email" className="input input-bordered" required />
                 </div>
-                <div className="form-control">
+                <div className="form-control relative">
                     <label className="label">
                         <span className="label-text">Password</span>
                     </label>
-                    <input type="password" placeholder="password" name="password" className="input input-bordered" required />
+                    <input type={showpass ? "text" : "password"} placeholder="password" name="password" className="input input-bordered" required />
+                    <div className="absolute top-12 right-2 btn btn-xs" onClick={() => setShowpass(!showpass)}>
+                        {
+                            showpass ? (
+                                <FaEyeSlash className="text-gray-500" />
+                            ) : (
+                                <FaEye className="text-gray-500" />
+                            )
+                        }
+                    </div>
                     <label className="label">
                         <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                     </label>
