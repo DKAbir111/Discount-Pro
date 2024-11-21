@@ -10,6 +10,7 @@ import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../components/Pages/UpdateProfile";
 import ErrorPage from "../components/Pages/ErrorPage";
 import ForgetPassword from "../components/Pages/ForgetPassword";
+import AboutDev from "../components/Pages/AboutDev";
 
 const router = createBrowserRouter([
     {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
             {
                 path: '/auth/login',
                 element: <Login />
+            },
+            {
+                path: '/about',
+                element: <AboutDev />
             },
             {
                 path: '/auth/register',
