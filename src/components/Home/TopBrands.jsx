@@ -12,7 +12,7 @@ export default function TopBrands() {
             <Marquee pauseOnHover gradient={false} speed={50}>
                 {data.map((brand) => (
                     <Link
-                        to={`/brand/${brand._id}`}
+                        to={`/brand/details/${brand._id}`}
                         key={brand._id}
                         className="flex flex-col items-center justify-center mx-6"
                     >

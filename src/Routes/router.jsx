@@ -11,6 +11,7 @@ import UpdateProfile from "../components/Pages/UpdateProfile";
 import ErrorPage from "../components/Pages/ErrorPage";
 import ForgetPassword from "../components/Pages/ForgetPassword";
 import AboutDev from "../components/Pages/AboutDev";
+import BrandDetails from "../components/Pages/BrandDetsils";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,11 @@ const router = createBrowserRouter([
             {
                 path: '/auth/login',
                 element: <Login />
+            },
+            {
+                path: '/brand/details/:id',
+                element: <BrandDetails />,
+                loader: ({ params }) => fetch(`/public/data.json`).then(res => res.json()).then(data => data.find(brand => brand._id === params.id)),
             },
             {
                 path: '/about',

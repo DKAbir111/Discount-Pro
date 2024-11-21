@@ -105,14 +105,13 @@ const Footer = () => {
                 <div>
                     <h3 className="text-lg font-semibold mb-4">Get in Touch for More Offers</h3>
                     <div className="text-xl flex gap-3">
-                        <FaFacebook />
-                        <FaInstagram />
-                        <FaTwitter />
-                        <FaTelegram />
+                        <a href="https://www.facebook.com/darulkararabir/" target="_blank" rel="noopener noreferrer"><FaFacebook /></a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">    <FaInstagram /></a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer">         <FaTwitter /></a>
+                        <a href="http://" target="_blank" rel="noopener noreferrer"><FaTelegram /></a>
                     </div>
                     <p className='text-sm mt-2'>Stay connected with us to discover the latest discounts, exclusive deals, and exciting offers tailored just for you!</p>
                 </div>
-
 
                 {/* Hiring Section */}
                 <div>
