@@ -21,7 +21,6 @@ const faqs = [
     }
 ]
 
-
 export default function FAQSection() {
     return (
         <div className="container mx-auto my-12 md:w-10/12">
@@ -29,7 +28,7 @@ export default function FAQSection() {
                 Frequently Asked Questions
             </h3>
             <div className="space-y-4">
-                {faqs.map((faq, index) => (
+                {faqs?.map((faq, index) => (
                     <div key={index} className="collapse collapse-arrow border">
                         <input type="radio" name="my-accordion-2" defaultChecked />
                         <div className="collapse-title text-xl font-medium bg-[#E7F7F7]">{faq.question}</div>

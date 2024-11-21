@@ -13,15 +13,15 @@ const BrandsPage = () => {
             .then((data) => setBrands(data))
             .catch((error) => console.log("Error fetching data:", error));
     }, []);
-
     // Handle search input
     const handleSearch = (e) => {
         setSearch(e.target.value);
     };
 
-    const filteredBrands = brands.filter(brand =>
-        brand.brand_name.toLowerCase().includes(search.toLowerCase())
+    const filteredBrands = brands?.filter(brand =>
+        brand.brand_name && brand.brand_name.toLowerCase().includes(search.toLowerCase())
     );
+
 
     return (
         <div className="py-6 px-3 container mx-auto">
@@ -52,8 +52,8 @@ const BrandsPage = () => {
 
                 {/* Brand Cards */}
                 {filteredBrands.length > 0 ? (
-                    filteredBrands.map(brand => (
-                        <BrandCard key={brand._id} brand={brand} />
+                    filteredBrands?.map((brand, index) => (
+                        <BrandCard key={brand._id || index} brand={brand} />
                     ))
                 ) : (
                     <p className="text-center text-gray-500 mt-4">No brands found.</p>

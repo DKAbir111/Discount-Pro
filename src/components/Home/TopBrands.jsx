@@ -10,7 +10,7 @@ export default function TopBrands() {
                 Top Brands
             </h3>
             <Marquee pauseOnHover gradient={false} speed={50}>
-                {data.map((brand) => (
+                {data?.map((brand) => (
                     <Link
                         to={`/brand/details/${brand._id}`}
                         key={brand._id}

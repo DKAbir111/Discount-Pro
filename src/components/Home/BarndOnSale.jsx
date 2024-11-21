@@ -7,7 +7,8 @@ import { useEffect } from "react";
 
 export default function BrandsOnSale() {
     const data = useLoaderData();
-    const brandsOnSale = data.filter((brand) => brand.isSaleOn);
+    const brandsOnSale = data?.filter((brand) => brand.isSaleOn);
+
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -36,7 +37,7 @@ export default function BrandsOnSale() {
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                 {/* Card for Each Brand */}
-                {brandsOnSale.map((brand) => (
+                {brandsOnSale?.map((brand) => (
                     <Link to={`/brand/details/${brand._id}`}
                         key={brand._id} data-aos="zoom-in"
                         className="rounded-md shadow-md flex flex-col items-center bg-white"

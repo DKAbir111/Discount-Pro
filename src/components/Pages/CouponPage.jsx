@@ -43,7 +43,7 @@ export default function CouponPage() {
             </div>
             <div className="grid md:grid-cols-2 gap-4">
                 {
-                    coupons.map((coupon, index) => (
+                    coupons?.map((coupon, index) => (
                         <CouponCard key={index} coupon={coupon} />
                     ))
                 }

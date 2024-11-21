@@ -1,7 +1,3 @@
-Here’s a structure for your **Discount PRO** project’s README file based on the format used for **GadgetHeaven**:
-
----
-
 # **Discount PRO** - Coupon Aggregator
 
 Welcome to **Discount PRO**, the ultimate app for finding the latest discount codes from top Bangladeshi e-commerce stores. This app allows users to browse and access discount codes easily while also offering a smooth sign-up and login experience.
@@ -138,6 +134,3 @@ To run the project locally, follow these steps:
 - **Darun Karas Abir** (GitHub: [@DKAbir111](https://github.com/DKAbir111))
 - Special thanks to all contributors and users who provide feedback.
 
----
-
-This format follows a similar structure to your **GadgetHeaven** README and includes the relevant details for your **Discount PRO** project. Let me know if you'd like to adjust anything!

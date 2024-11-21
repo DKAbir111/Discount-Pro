@@ -27,7 +27,7 @@ export function FeaturedCoupons() {
         Featured Coupons
       </h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {coupons.map((coupon) => (
+        {coupons?.map((coupon) => (
           <div data-aos="flip-left"
             data-aos-easing="ease-out-cubic"
             data-aos-duration="2000"

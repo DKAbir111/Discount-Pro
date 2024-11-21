@@ -15,7 +15,7 @@ export function TopCategories() {
                 Top Categories
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                {categories.map((category) => (
+                {categories?.map((category) => (
                     <div
                         key={category.id} data-aos="zoom-in-left"
                         className="border rounded-md shadow-sm flex flex-col items-center bg-white hover:shadow-md transition-shadow"
