@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <HomeLayout />,
-                loader: () => fetch('/public/data.json'),
+                loader: () => fetch('/data.json'),
             },
             {
                 path: '/brands',
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
             {
                 path: '/brand/:id',
                 element: <PrivateRoute> <CouponPage /></PrivateRoute>,
-                loader: ({ params }) => fetch(`/public/data.json`).then(res => res.json()).then(data => data.find(brand => brand._id === params.id)),
+                loader: ({ params }) => fetch(`/data.json`).then(res => res.json()).then(data => data.find(brand => brand._id === params.id)),
             },
             {
                 path: '/profile',
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
             {
                 path: '/brand/details/:id',
                 element: <BrandDetails />,
-                loader: ({ params }) => fetch(`/public/data.json`).then(res => res.json()).then(data => data.find(brand => brand._id === params.id)),
+                loader: ({ params }) => fetch(`/data.json`).then(res => res.json()).then(data => data.find(brand => brand._id === params.id)),
             },
             {
                 path: '/about',
