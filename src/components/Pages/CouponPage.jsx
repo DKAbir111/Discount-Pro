@@ -4,6 +4,7 @@ import CouponCard from "../Card/CouponCard";
 import { AiOutlineLike } from "react-icons/ai";
 import { AiOutlineDislike } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
+import Title from "../PageTitle/Title";
 export default function CouponPage() {
     const brand = useLoaderData()
     const { brand_name, rating, description, brand_logo, coupons, shop_link } = brand;
@@ -28,6 +29,7 @@ export default function CouponPage() {
 
     return (
         <div className="p-7 bg-base-200 w-11/12  lg:w-1/2 mx-auto my-10 flex flex-col  justify-center items-center rounded-lg shadow-2xl relative">
+            <Title title="Discount Pro | Coupon" />
             <div className="absolute btn btn-circle btn-sm btn-error -top-2 -right-2" onClick={handleClose}>
                 <RxCross2 />
             </div>

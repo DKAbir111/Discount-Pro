@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import AuthContext from "../../Context/AuthContext";
 import { Link } from "react-router-dom";
+import Title from "../PageTitle/Title";
 
 export default function Profile() {
 
@@ -8,7 +9,7 @@ export default function Profile() {
     console.log(user)
     return (
         <div className="min-h-screen bg-gray-100 pb-20">
-
+            <Title title="DiscountPro | Profile" />
             <div className="relative bg-[#2C3D4D] pb-7  text-white h-60 flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold">Welcome, {user?.

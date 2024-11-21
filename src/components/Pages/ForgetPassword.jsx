@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
 import { toast } from "react-toastify";
+import Title from "../PageTitle/Title";
 
 export default function ForgetPassword() {
 
@@ -31,6 +32,7 @@ export default function ForgetPassword() {
 
     return (
         <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-sm mx-auto md:px-7 py-7 my-16">
+            <Title title="DiscountPro | Forget Password" />
             <h3 className="text-center text-2xl font-semibold mb-4">Reset Your Password</h3>
             <form className="card-body" onSubmit={handleSubmit}>
                 <div className="form-control">

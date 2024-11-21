@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import BrandCard from "../Card/BrandCard";
+import Title from "../PageTitle/Title";
 
 const BrandsPage = () => {
     const [brands, setBrands] = useState([]);
@@ -24,6 +25,7 @@ const BrandsPage = () => {
 
     return (
         <div className="py-6 px-3 container mx-auto">
+            <Title title="Brands | Home" />
             <h3 className="text-2xl font-semibold text-center pb-5">Trending Brands</h3>
             <div className="grid grid-cols-1 gap-5 lg:w-4/5 mx-auto p-1">
                 {/* Search bar */}

@@ -1,11 +1,12 @@
 import { useLoaderData, Link } from "react-router-dom";
+import Title from "../PageTitle/Title";
 
 export default function BrandDetails() {
     const brand = useLoaderData();
 
     return (
         <div className="container mx-auto px-4 py-8">
-
+            <Title title="DiscountPro | Brand Detsils" />
             <div className="bg-white shadow-lg md:w-2/3 mx-auto rounded-lg p-6 mb-8">
                 <div className="flex flex-col gap-5 md:flex-row items-center justify-around md:items-start">
                     <img

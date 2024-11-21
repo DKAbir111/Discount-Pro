@@ -1,5 +1,6 @@
 import { useRouteError, Link } from "react-router-dom";
 import { FaExclamationTriangle } from "react-icons/fa";
+import Title from "../PageTitle/Title";
 
 export default function ErrorPage() {
     const error = useRouteError();
@@ -7,6 +8,7 @@ export default function ErrorPage() {
 
     return (
         <div className="flex flex-col items-center justify-center h-screen bg-gray-100 text-gray-800">
+            <Title title="Error" />
             <div className="bg-white shadow-md rounded-lg p-10 text-center">
                 <div className="text-red-500 text-6xl mb-4 flex justify-center">
                     <FaExclamationTriangle />

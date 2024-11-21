@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import AuthContext from "../../Context/AuthContext";
+import Title from "../PageTitle/Title";
 
 export default function UpdateProfile() {
     const navigate = useNavigate();
@@ -22,6 +23,7 @@ export default function UpdateProfile() {
 
     return (
         <div className="min-h-screen bg-gray-100 flex justify-center items-center">
+            <Title title="DiscountPro | Update Profile" />
             <div className="bg-white p-10 rounded-xl shadow-lg max-w-md w-full">
                 <h2 className="text-center text-2xl font-bold mb-4">Update Profile</h2>
                 <form onSubmit={handleUpdate} className="space-y-4">

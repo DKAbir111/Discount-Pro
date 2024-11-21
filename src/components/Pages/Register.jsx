@@ -5,6 +5,7 @@ import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
+import Title from "../PageTitle/Title";
 
 export default function Register() {
     const { createUser } = useContext(AuthContext);
@@ -87,6 +88,7 @@ export default function Register() {
 
     return (
         <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-sm mx-auto md:px-7 pt-7 my-16">
+            <Title title="DiscountPro | Register" />
             <h3 className="text-center text-2xl font-semibold">Register your account</h3>
             <form className="card-body" onSubmit={handleSubmit}>
                 {/* Name Field */}

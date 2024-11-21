@@ -1,9 +1,11 @@
 
 import { FaLinkedin, FaGithub } from "react-icons/fa";
+import Title from "../PageTitle/Title";
 
 export default function AboutDev() {
     return (
         <div className="container mx-auto px-4 py-8">
+            <Title title="DiscountPro | About Dev" />
             <div className="bg-base-100 shadow-md rounded-lg p-6 max-w-4xl mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-6">About the Developer</h2>
 
