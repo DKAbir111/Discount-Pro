@@ -3,7 +3,7 @@ import AuthContext from "../../Context/AuthContext";
 import auth from "../../Firebase/firebase.init";
 import { updateProfile } from "firebase/auth";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 
 export default function Register() {
@@ -169,7 +169,11 @@ export default function Register() {
                 <div className="form-control mt-3">
                     <button className="btn bg-[#19BC9B] text-white">Register</button>
                 </div>
+                <div className="flex justify-center">
+                    <small className="text-center">Already Have An Account ? <Link to='/auth/login' className="text-red-500">Login</Link></small>
+                </div>
             </form>
+
         </div>
     );
 }

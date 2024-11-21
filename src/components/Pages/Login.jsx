@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import AuthContext from "../../Context/AuthContext";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 
 export default function Login() {
@@ -12,7 +13,7 @@ export default function Login() {
     console.log(location)
     const [error, setError] = useState("")
     // console.log(location)
-    const { Login } = useContext(AuthContext)
+    const { Login, signInWithGoogle } = useContext(AuthContext)
     const handleLogin = (event) => {
         event.preventDefault();
         const email = event.target.email.value;
@@ -24,6 +25,17 @@ export default function Login() {
             })
             .catch((error) => {
                 console.error("Error creating user:", error.message);
+                setError(error.message)
+            });
+
+    }
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then(() => {
+                navigate(location?.state ? location.state : "/", { state: location.pathname })
+            })
+            .catch((error) => {
+                console.error("Error signing in with Google:", error.message);
                 setError(error.message)
             });
 
@@ -61,6 +73,10 @@ export default function Login() {
                     <button className="btn bg-[#19BC9B] text-white">Login</button>
                 </div>
             </form>
+            <div className="px-20 cursor-pointer mb-2" >
+                <span className="flex items-center gap-1 border rounded-md p-2 justify-center text-sm hover:bg-base-200" onClick={handleGoogleLogin}><FcGoogle className="text-2xl" />  Sign in with Google</span>
+
+            </div>
             <div className="flex justify-center">
                 <small className="text-center">Dont’t Have An Account ? <Link to='/auth/register' className="text-red-500">Register</Link></small>
             </div>
