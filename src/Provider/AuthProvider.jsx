@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import AuthContext from "../Context/AuthContext";
 import auth from "../Firebase/firebase.init";
 import PropTypes from "prop-types";
@@ -35,7 +35,11 @@ export default function AuthProvider({ children }) {
     const signInWithGoogle = () => {
         return signInWithPopup(auth, provider);
     };
+    //password reset email
 
+    const passReset = (email) => {
+        return sendPasswordResetEmail(auth, email)
+    }
     // Logout the user
     const logOut = () => {
         setLoading(true);
@@ -65,6 +69,7 @@ export default function AuthProvider({ children }) {
         loading,
         signInWithGoogle,
         updateUserProfile,
+        passReset
     };
 
     return (

@@ -170,7 +170,7 @@ export default function Register() {
                     <button className="btn bg-[#19BC9B] text-white">Register</button>
                 </div>
                 <div className="flex justify-center">
-                    <small className="text-center">Already Have An Account ? <Link to='/auth/login' className="text-red-500">Login</Link></small>
+                    <small className="text-center">Already Have An Account ? <Link to='/auth/login' className="text-[#19BC9B] hover:underline">Login</Link></small>
                 </div>
             </form>
 
