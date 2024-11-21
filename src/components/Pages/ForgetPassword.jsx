@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 export default function ForgetPassword() {
 
 
-    const { passReset } = useContext(AuthContext)
+    const { passReset, logOut } = useContext(AuthContext)
     const location = useLocation();
     const [email, setEmail] = useState(location.state?.email || "");
 
@@ -20,7 +20,9 @@ export default function ForgetPassword() {
         passReset(email)
             .then(() => {
                 toast.success('Password reset email sent successfully')
-                navigate("/auth/login")
+                logOut();
+                window.open("https://mail.google.com/", "_blank");
+                navigate('/auth/login')
                 event.target.reset()
             }).catch((error) => {
                 toast.error(error.message)
