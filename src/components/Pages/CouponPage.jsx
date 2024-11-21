@@ -14,10 +14,21 @@ export default function CouponPage() {
         edit: false
     };
     const navigate = useNavigate()
+    const location = useLocation()
+    console.log(location.state)
+    const handleClose = () => {
+        if (location.state) {
+            navigate('/')
+        }
+        else {
+            navigate(-1)
+        }
+    }
+
 
     return (
         <div className="p-7 bg-base-200 w-1/2 mx-auto my-10 flex flex-col  justify-center items-center rounded-lg shadow-2xl relative">
-            <div className="absolute btn btn-circle btn-sm btn-error -top-2 -right-2" onClick={() => navigate(-1)}>
+            <div className="absolute btn btn-circle btn-sm btn-error -top-2 -right-2" onClick={handleClose}>
                 <RxCross2 />
             </div>
             <div className="flex items-center gap-2 justify-center flex-col">
@@ -39,10 +50,10 @@ export default function CouponPage() {
             <div className="divider"></div>
             <div className="flex gap-2 items-center">
                 <p>Did the code work?</p>
-                <div className="btn btn-sm btn-circle border shadow-md">
+                <div className="btn btn-sm btn-circle border shadow-md btn-success bg-[#19BC9B] ">
                     <AiOutlineLike className="text-lg" />
                 </div>
-                <div className="btn btn-circle btn-sm  border shadow-md">
+                <div className="btn btn-circle btn-sm  border shadow-md btn-error">
                     <AiOutlineDislike className="text-lg" />
                 </div>
 

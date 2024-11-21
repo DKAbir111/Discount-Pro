@@ -6,6 +6,7 @@ import AuthContext from "../../Context/AuthContext";
 export default function Login() {
     const navigate = useNavigate()
     const location = useLocation()
+    console.log(location)
     const [error, setError] = useState("")
     // console.log(location)
     const { Login } = useContext(AuthContext)
@@ -16,7 +17,7 @@ export default function Login() {
         Login(email, password)
             .then((result) => {
                 console.log("User created successfully!", result);
-                navigate(location?.state ? location.state : "/")
+                navigate(location?.state ? location.state : "/", { state: location.pathname })
             })
             .catch((error) => {
                 console.error("Error creating user:", error.message);

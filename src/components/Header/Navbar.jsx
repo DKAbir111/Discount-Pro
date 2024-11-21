@@ -31,7 +31,7 @@ export default function Navbar() {
         </li>
     </>
     return (
-        <div className="bg-[#2C3D4E]">
+        <div className="bg-[#2C3D4E]  sticky top-0 z-20">
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
