@@ -27,19 +27,19 @@ export default function CouponPage() {
 
 
     return (
-        <div className="p-7 bg-base-200 w-1/2 mx-auto my-10 flex flex-col  justify-center items-center rounded-lg shadow-2xl relative">
+        <div className="p-7 bg-base-200 w-11/12  lg:w-1/2 mx-auto my-10 flex flex-col  justify-center items-center rounded-lg shadow-2xl relative">
             <div className="absolute btn btn-circle btn-sm btn-error -top-2 -right-2" onClick={handleClose}>
                 <RxCross2 />
             </div>
             <div className="flex items-center gap-2 justify-center flex-col">
                 <img src={brand_logo} alt={brand_name} className="w-40" />
                 <h3 className="text-2xl font-bold text-center">{brand_name}</h3>
-                <p className="text-gray-700 text-xl">{description}</p>
+                <p className="text-gray-700 text-xl text-center">{description}</p>
                 <ReactStars {...firstExample} />
                 <small className="font-semibold text-[#FFD601]">Rating:{rating}</small>
 
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid md:grid-cols-2 gap-4">
                 {
                     coupons.map((coupon, index) => (
                         <CouponCard key={index} coupon={coupon} />

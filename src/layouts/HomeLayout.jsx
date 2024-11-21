@@ -8,14 +8,16 @@ import { TopCategories } from "../components/Home/TopCategories";
 
 export default function HomeLayout() {
     return (
-        <div>
+        <div className="overflow-hidden">
             <SimpleSlider />
             <TopBrands />
-            <BrandsOnSale />
-            <TopCategories />
-            <FeaturedCoupons />
-            <FAQSection />
-            <SubscriptionCard />
+            <div className="p-3">
+                <BrandsOnSale />
+                <TopCategories />
+                <FeaturedCoupons />
+                <FAQSection />
+                <SubscriptionCard />
+            </div>
         </div>
     )
 }

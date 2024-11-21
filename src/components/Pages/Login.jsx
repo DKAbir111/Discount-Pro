@@ -44,7 +44,7 @@ export default function Login() {
     };
 
     return (
-        <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-sm mx-auto px-7 py-7 my-16">
+        <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-sm mx-auto px-0 md:px-7 py-7 my-16">
             <h3 className="text-center text-2xl font-semibold">Login your account</h3>
             <form className="card-body" onSubmit={handleLogin}>
                 <div className="form-control">

@@ -76,7 +76,7 @@ export default function Navbar() {
                             <Link to='/auth/login' className="btn bg-[#19BC9B] border-none rounded-sm">Login</Link>
                             <Link to='/auth/register' className="border-2 btn rounded-sm text-white bg-transparent">Registration</Link></> :
                             <div className="flex gap-3 items-center">
-                                <p className="text-white">Welcome! {user.displayName.split(" ")[0]}</p>
+                                <p className="text-white hidden md:block">Welcome! {user.displayName.split(" ")[0]}</p>
                                 <span className="rounded-full border border-[#19BC9B]">
                                     <img src={user.photoURL} alt="" className="rounded-full h-12 w-12" />
                                 </span>

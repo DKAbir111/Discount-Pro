@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function TopCategories() {
     const categories = [
         { id: 1, name: "Electronics", image: "https://i.ibb.co.com/MCV8kz2/elec.jpg" },
@@ -7,7 +9,7 @@ export function TopCategories() {
     ];
 
     return (
-        <div className="my-12 container mx-auto">
+        <Link to={'/brands'} className="my-12 container mx-auto">
             {/* Title */}
             <h3 className="text-2xl text-center text-gray-700 font-semibold mb-6">
                 Top Categories
@@ -29,6 +31,6 @@ export function TopCategories() {
                     </div>
                 ))}
             </div>
-        </div>
+        </Link>
     );
 }

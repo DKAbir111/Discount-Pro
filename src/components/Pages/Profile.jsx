@@ -9,7 +9,7 @@ export default function Profile() {
     return (
         <div className="min-h-screen bg-gray-100 pb-20">
 
-            <div className="relative bg-[#2C3D4D]  text-white h-60 flex items-center justify-center">
+            <div className="relative bg-[#2C3D4D] pb-7  text-white h-60 flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-4xl font-bold">Welcome, {user?.
                         displayName

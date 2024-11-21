@@ -11,7 +11,7 @@ export default function BrandDetails() {
                     <img
                         src={brand.brand_logo}
                         alt={brand.brand_name}
-                        className="w-24 h-24 md:w-40 md:h-40 object-contain mb-4 md:mb-0 "
+                        className="w-32 h-32 md:w-40 md:h-40 object-contain mb-4 md:mb-0 "
                     />
 
                     <div className="ml-0 md:ml-6 text-center md:text-left">

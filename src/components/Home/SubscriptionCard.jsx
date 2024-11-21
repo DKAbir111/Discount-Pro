@@ -1,7 +1,7 @@
 import subscribe from '../../assets/subscribe-img.png'
 export default function SubscriptionCard() {
     return (
-        <div className="bg-[#E7F8F7] rounded-lg p-8 flex items-center justify-between my-12 container mx-auto md:w-10/12">
+        <div className="bg-[#E7F8F7] rounded-lg p-4 md:p-8 flex items-center justify-between my-12 container mx-auto md:w-10/12">
             {/* Left Section */}
             <div className='md:w-3/5'>
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">
