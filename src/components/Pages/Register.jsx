@@ -109,7 +109,7 @@ export default function Register() {
                         <span className="label-text">Photo URL</span>
                     </label>
                     <input
-                        type="text"
+                        type="url"
                         placeholder="Enter Photo URL"
                         name="photo"
                         className="input input-bordered"

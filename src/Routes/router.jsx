@@ -7,6 +7,7 @@ import Login from "../components/Pages/Login";
 import Register from "../components/Pages/Register";
 import Profile from "../components/Pages/Profile";
 import PrivateRoute from "./PrivateRoute";
+import UpdateProfile from "../components/Pages/UpdateProfile";
 
 const router = createBrowserRouter([
     {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><Profile /></PrivateRoute>
             },
             {
+                path: '/update-profile',
+                element: <PrivateRoute><UpdateProfile /></PrivateRoute>
+            },
+            {
                 path: '/auth/login',
                 element: <Login />
             },
@@ -39,6 +44,7 @@ const router = createBrowserRouter([
                 path: '/auth/register',
                 element: <Register />
             },
+
 
 
         ]
