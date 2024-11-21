@@ -8,11 +8,13 @@ import Register from "../components/Pages/Register";
 import Profile from "../components/Pages/Profile";
 import PrivateRoute from "./PrivateRoute";
 import UpdateProfile from "../components/Pages/UpdateProfile";
+import ErrorPage from "../components/Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',

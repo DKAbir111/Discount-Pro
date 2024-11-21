@@ -1,6 +1,10 @@
 import { useContext } from "react"
 import { Link, NavLink } from "react-router-dom"
 import AuthContext from "../../Context/AuthContext"
+import { IoMdHome } from "react-icons/io";
+import { CgProfile } from "react-icons/cg";
+import { SiBrandfolder } from "react-icons/si";
+import { MdDeveloperMode } from "react-icons/md";
 
 export default function Navbar() {
 
@@ -16,18 +20,18 @@ export default function Navbar() {
     }
     const links = <>
         <li>
-            <NavLink to={'/'} className='md:text-white'>Home</NavLink>
+            <NavLink to={'/'} className='lg:text-white'><IoMdHome /> Home</NavLink>
         </li>
         <li>
-            <NavLink to={'/brands'} className='md:text-white'>Brands</NavLink>
+            <NavLink to={'/brands'} className='lg:text-white'><SiBrandfolder /> Brands</NavLink>
         </li>
         {
             user?.email && <li>
-                <NavLink to={'/profile'} className='md:text-white'>My Profile</NavLink>
+                <NavLink to={'/profile'} className='lg:text-white'><CgProfile /> My Profile</NavLink>
             </li>
         }
         <li>
-            <NavLink to={'/about'} className='md:text-white'>About Dev</NavLink>
+            <NavLink to={'/about'} className='lg:text-white'><MdDeveloperMode /> About Dev</NavLink>
         </li>
     </>
     return (
@@ -71,7 +75,13 @@ export default function Navbar() {
                         !user ? <>
                             <Link to='/auth/login' className="btn bg-[#19BC9B] border-none rounded-sm">Login</Link>
                             <Link to='/auth/register' className="border-2 btn rounded-sm text-white bg-transparent">Registration</Link></> :
-                            <button className="btn bg-[#19BC9B] border-none rounded-sm" onClick={handleLogOut}>Log Out</button>
+                            <div className="flex gap-3 items-center">
+                                <p className="text-white">Welcome! {user.displayName.split(" ")[0]}</p>
+                                <span className="rounded-full border border-[#19BC9B]">
+                                    <img src={user.photoURL} alt="" className="rounded-full h-12 w-12" />
+                                </span>
+                                <button className="btn bg-[#19BC9B] border-none rounded-sm" onClick={handleLogOut}>Log Out</button>
+                            </div>
                     }
                 </div>
             </div>
