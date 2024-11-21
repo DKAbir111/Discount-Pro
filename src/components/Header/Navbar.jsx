@@ -61,7 +61,7 @@ export default function Navbar() {
                             }
                         </ul>
                     </div>
-                    <a className="text-2xl font-bold text-white">Discount Pro</a>
+                    <Link to='/' className="text-2xl font-bold text-white">Discount Pro</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-2">

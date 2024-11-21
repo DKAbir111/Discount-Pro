@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "animate.css": "^4.1.1",
+    "aos": "^2.3.4",
     "firebase": "^11.0.2",
     "framer-motion": "^11.11.17",
     "localforage": "^1.10.0",

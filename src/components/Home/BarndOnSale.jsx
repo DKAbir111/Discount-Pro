@@ -1,12 +1,19 @@
 import { motion } from "framer-motion";
 import { useLoaderData } from "react-router-dom";
+import AOS from 'aos'
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function BrandsOnSale() {
     const data = useLoaderData();
     const brandsOnSale = data.filter((brand) => brand.isSaleOn);
-
+    useEffect(() => {
+        AOS.init({
+            duration: 1000,
+        })
+    }, [])
     return (
-        <div className="my-12 container mx-auto p-3 md:p-0">
+        <div className="my-12 container mx-auto p-3 md:p-0" >
             <h3 className="text-2xl text-center text-gray-700 font-semibold mb-6 flex justify-center gap-2">
                 Brands on  <motion.div
                     animate={{
@@ -31,7 +38,7 @@ export default function BrandsOnSale() {
                 {/* Card for Each Brand */}
                 {brandsOnSale.map((brand) => (
                     <div
-                        key={brand._id}
+                        key={brand._id} data-aos="zoom-in"
                         className="rounded-md shadow-md flex flex-col items-center bg-white"
                     >
                         {/* Brand Logo */}
