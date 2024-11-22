@@ -5,7 +5,7 @@ Welcome to **Discount PRO**, the ultimate app for finding the latest discount co
 ## Live Website
 
 Check out the live demo of **Discount PRO** here:  
-**[Live Demo Link](#)** *(URL)*
+**[Live Demo Link](#)** *(https://effervescent-profiterole-63765b.netlify.app/)*
 
 ---
 
