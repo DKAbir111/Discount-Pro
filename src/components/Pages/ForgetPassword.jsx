@@ -18,17 +18,20 @@ export default function ForgetPassword() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+
         passReset(email)
             .then(() => {
-                toast.success('Password reset email sent successfully')
-                logOut();
+                toast.success('Password reset email sent successfully');
                 window.open("https://mail.google.com/", "_blank");
-                navigate('/auth/login')
-                event.target.reset()
-            }).catch((error) => {
-                toast.error(error.message)
+                event.target.reset();
+                logOut();
+                navigate('/auth/login');
             })
-    }
+            .catch((error) => {
+                toast.error(error.message || 'An error occurred while resetting the password');
+            });
+    };
+
 
     return (
         <div className="card bg-base-100 w-full max-w-lg shrink-0 shadow-sm mx-auto md:px-7 py-7 my-16">

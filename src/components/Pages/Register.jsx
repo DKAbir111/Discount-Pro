@@ -6,9 +6,10 @@ import { toast } from "react-toastify";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa6";
 import Title from "../PageTitle/Title";
+import { FcGoogle } from "react-icons/fc";
 
 export default function Register() {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, signInWithGoogle } = useContext(AuthContext);
     const [error, setError] = useState('');
     const navigate = useNavigate()
 
@@ -83,6 +84,16 @@ export default function Register() {
             .catch(error => {
                 setError(error.message);
                 notify(error.message);
+            });
+    };
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then(() => {
+                navigate(location?.state || "/", { state: location.pathname });
+            })
+            .catch((error) => {
+                console.error("Error signing in with Google:", error.message);
+                setError(error.message);
             });
     };
 
@@ -170,6 +181,14 @@ export default function Register() {
                 {/* Register Button */}
                 <div className="form-control mt-3">
                     <button className="btn bg-[#19BC9B] text-white">Register</button>
+                </div>
+                <div className="px-20 cursor-pointer mb-2">
+                    <span
+                        className="flex items-center gap-1 border rounded-md p-2 justify-center text-sm hover:bg-base-200"
+                        onClick={handleGoogleLogin}
+                    >
+                        <FcGoogle className="text-2xl" /> Sign in with Google
+                    </span>
                 </div>
                 <div className="flex justify-center">
                     <small className="text-center">Already Have An Account ? <Link to='/auth/login' className="text-[#19BC9B] hover:underline">Login</Link></small>
